@@ -30,8 +30,9 @@ desktop.ini
 # Jupyter
 .ipynb_checkpoints/
 
-# Streamlit
-.streamlit/
+# Streamlit (keep config.toml tracked so deploys pick up theme settings;
+# ignore only per-user secrets).
+.streamlit/secrets.toml
 
 # Outputs (regeneratable)
 outputs/figures/*.png

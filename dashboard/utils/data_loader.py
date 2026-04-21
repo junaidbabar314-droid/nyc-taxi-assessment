@@ -34,10 +34,38 @@ from data_loader import (            # noqa: E402 — path-dependent import
     list_parquet_files as _raw_list_files,
     load_with_zones as _raw_load_with_zones,
 )
+from config import DATA_DIR, PARQUET_PATTERN  # noqa: E402
 
 # ─── Constants ──────────────────────────────────────────────────────────
 AUTO_SAMPLE_THRESHOLD = 5_000_000   # rows — auto-sample above this
 AUTO_SAMPLE_FRAC = 0.10             # 10% sample when auto-triggered
+
+# On Streamlit Community Cloud the repo ships without the raw Parquet
+# files (they are release assets).  Auto-fetch the requested month on
+# first load so the dashboard works out of the box when deployed.
+_RELEASE_BASE = (
+    "https://github.com/junaidbabar314-droid/nyc-taxi-assessment/"
+    "releases/download/v1.0-data"
+)
+
+
+def _ensure_month_present(year: int, month: int) -> None:
+    """Download a single month Parquet from the GitHub release if missing.
+
+    Silent no-op when the file already exists locally.  Intended for
+    Streamlit Cloud deployments where ``data/`` starts empty.
+    """
+    filename = PARQUET_PATTERN.format(year=year, month=month)
+    target = DATA_DIR / filename
+    if target.exists() and target.stat().st_size > 0:
+        return
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    url = f"{_RELEASE_BASE}/{filename}"
+    import urllib.request
+    with st.spinner(f"Downloading {filename} from release (first run)..."):
+        tmp = target.with_suffix(target.suffix + ".part")
+        urllib.request.urlretrieve(url, tmp)
+        tmp.replace(target)
 
 
 @st.cache_data(show_spinner="Loading trip data...", ttl=3600)
@@ -61,6 +89,7 @@ def cached_load_month(
     Returns:
         Cached DataFrame.
     """
+    _ensure_month_present(year, month)
     df = _raw_load_month(year, month, sample_frac=sample_frac)
 
     # Auto-sample large datasets when no explicit fraction was given
@@ -95,6 +124,7 @@ def cached_load_with_zones(
     sample_frac: Optional[float] = None,
 ) -> pd.DataFrame:
     """Load trip data merged with zone names, with caching."""
+    _ensure_month_present(year, month)
     df = _raw_load_with_zones(year, month, sample_frac=sample_frac)
 
     if sample_frac is None and len(df) > AUTO_SAMPLE_THRESHOLD:
