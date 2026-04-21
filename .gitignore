@@ -1,0 +1,43 @@
+# Data files (too large for GitHub — download from NYC TLC)
+data/*.parquet
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Environment
+.env
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Streamlit
+.streamlit/
+
+# Outputs (regeneratable)
+outputs/figures/*.png
+outputs/screenshots/*.png
+outputs/quality/
+outputs/privacy/
+outputs/security/
+outputs/*.txt
+outputs/*.csv

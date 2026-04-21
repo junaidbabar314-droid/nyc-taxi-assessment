@@ -1,0 +1,82 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5">
+  <diagram id="module2-privacy" name="Module 2 — Privacy Risk Detection">
+    <mxGraphModel dx="1122" dy="773" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1050" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Module 2: Privacy Risk Detection Architecture" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="350" y="15" width="500" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="input" value="&lt;b&gt;Input: Pandas DataFrame&lt;/b&gt;&lt;br&gt;Quasi-identifiers: pickup/dropoff locations (PULocationID, DOLocationID),&lt;br&gt;temporal fields (pickup_datetime, dropoff_datetime), payment_type" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=11;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="350" y="60" width="500" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="orch_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8E8E8;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="40" y="170" width="1320" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="orch_label" value="privacy_assessor.py — Orchestrator" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="60" y="175" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="an1" value="&lt;b&gt;PII Classifier&lt;/b&gt;&lt;br&gt;&lt;i&gt;pii_classifier.py&lt;/i&gt;&lt;br&gt;&lt;hr&gt;- Field-level PII detection&lt;br&gt;- Direct identifier check&lt;br&gt;- Quasi-identifier tagging&lt;br&gt;- Sensitivity levels:&lt;br&gt;  High / Medium / Low" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=10;fontColor=#000000;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="60" y="220" width="200" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="an2" value="&lt;b&gt;K-Anonymity Analyser&lt;/b&gt;&lt;br&gt;&lt;i&gt;k_anonymity.py&lt;/i&gt;&lt;br&gt;&lt;hr&gt;- Equivalence class sizes&lt;br&gt;- Min/max/median k values&lt;br&gt;- % records below k=5&lt;br&gt;- Quasi-identifier combos&lt;br&gt;&lt;br&gt;&lt;b&gt;Weight: 30%&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=10;fontColor=#000000;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="280" y="220" width="200" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="an3" value="&lt;b&gt;Entropy Analyser&lt;/b&gt;&lt;br&gt;&lt;i&gt;entropy.py&lt;/i&gt;&lt;br&gt;&lt;hr&gt;- Shannon entropy per field&lt;br&gt;- Information content&lt;br&gt;- Distribution uniformity&lt;br&gt;- Normalised entropy score&lt;br&gt;&lt;br&gt;&lt;b&gt;Weight: 20%&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=10;fontColor=#000000;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="500" y="220" width="200" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="an4" value="&lt;b&gt;Uniqueness Analyser&lt;/b&gt;&lt;br&gt;&lt;i&gt;uniqueness.py&lt;/i&gt;&lt;br&gt;&lt;hr&gt;- Unique record percentage&lt;br&gt;- Quasi-ID combination&lt;br&gt;  uniqueness rates&lt;br&gt;- Population unicity&lt;br&gt;&lt;br&gt;&lt;b&gt;Weight: 35%&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=10;fontColor=#000000;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="720" y="220" width="200" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="an5" value="&lt;b&gt;Linkage Attack Simulator&lt;/b&gt;&lt;br&gt;&lt;i&gt;linkage_attack.py&lt;/i&gt;&lt;br&gt;&lt;hr&gt;- Simulated re-identification&lt;br&gt;- Auxiliary data matching&lt;br&gt;- Cross-reference success rate&lt;br&gt;- Attack scenario modelling&lt;br&gt;&lt;br&gt;&lt;b&gt;Weight: 15%&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=10;fontColor=#000000;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="940" y="220" width="200" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="scorer_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="200" y="400" width="900" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="scorer" value="&lt;b&gt;risk_scorer.py — Weighted Risk Aggregation&lt;/b&gt;&lt;br&gt;Risk Score = (Uniqueness x 0.35) + (K-Anonymity x 0.30) + (Entropy x 0.20) + (Linkage x 0.15)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="310" y="410" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="thresholds" value="&lt;b&gt;Risk Thresholds:&lt;/b&gt;   Critical &amp;ge; 75  |  High &amp;ge; 50  |  Medium &amp;ge; 25  |  Low &amp;lt; 25" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="350" y="455" width="520" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" style="rounded=0;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1;" parent="1" source="an1" target="scorer_bg" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" style="rounded=0;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1;" parent="1" source="an2" target="scorer_bg" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" style="rounded=0;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1;" parent="1" source="an3" target="scorer_bg" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" style="rounded=0;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1;" parent="1" source="an4" target="scorer_bg" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" style="rounded=0;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1;" parent="1" source="an5" target="scorer_bg" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="out_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="200" y="560" width="900" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="out_label" value="Output" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="210" y="565" width="60" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="out1" value="&lt;b&gt;Risk Assessment Dict&lt;/b&gt;&lt;br&gt;{overall_risk, risk_level,&lt;br&gt;component_scores,&lt;br&gt;pii_classifications}" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="240" y="595" width="200" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="out2" value="&lt;b&gt;Visualisations&lt;/b&gt;&lt;br&gt;(visualisations.py)&lt;br&gt;Risk heatmap, k-anonymity&lt;br&gt;distribution, entropy bars" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="500" y="595" width="200" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="out3" value="&lt;b&gt;Dashboard Page&lt;/b&gt;&lt;br&gt;Privacy Risk&lt;br&gt;(Streamlit)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;dashed=1;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="760" y="595" width="160" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="a6" style="rounded=0;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;" parent="1" source="scorer_bg" target="out_bg" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QmqO11nLH0zbAFEwxnty-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.425;entryY=-0.007;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="input" target="orch_bg">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

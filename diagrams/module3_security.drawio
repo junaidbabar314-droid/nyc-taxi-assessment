@@ -1,0 +1,93 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5">
+  <diagram id="module3-security" name="Module 3 — Security Assessment">
+    <mxGraphModel dx="954" dy="657" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1050" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Module 3: Security Assessment Architecture" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="380" y="15" width="450" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="input_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="250" y="60" width="700" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="input_label" value="Input" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="260" y="62" width="50" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="input1" value="&lt;b&gt;Data Files&lt;/b&gt;&lt;br&gt;Parquet/CSV storage" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="280" y="90" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="input2" value="&lt;b&gt;System Configuration&lt;/b&gt;&lt;br&gt;config.py settings" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="480" y="90" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="input3" value="&lt;b&gt;File Permissions&lt;/b&gt;&lt;br&gt;OS-level metadata" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;dashed=1;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="680" y="90" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="orch_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8E8E8;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="40" y="190" width="1320" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="orch_label" value="security_assessor.py — Orchestrator" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="60" y="195" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ch1" value="&lt;b&gt;NIST CSF 2.0 Checker&lt;/b&gt;&lt;br&gt;&lt;i&gt;nist_checklist.py&lt;/i&gt;&lt;br&gt;&lt;hr&gt;&lt;b&gt;6 Core Functions:&lt;/b&gt;&lt;br&gt;1. Govern&lt;br&gt;2. Identify&lt;br&gt;3. Protect&lt;br&gt;4. Detect&lt;br&gt;5. Respond&lt;br&gt;6. Recover&lt;br&gt;&lt;hr&gt;Automated control checks&lt;br&gt;Gap identification" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=10;fontColor=#000000;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="70" y="240" width="220" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="ch2" value="&lt;b&gt;ISO 27001 Checker&lt;/b&gt;&lt;br&gt;&lt;i&gt;(within nist_checklist.py)&lt;/i&gt;&lt;br&gt;&lt;hr&gt;&lt;b&gt;114 Controls:&lt;/b&gt;&lt;br&gt;- Information security policies&lt;br&gt;- Access control&lt;br&gt;- Cryptography&lt;br&gt;- Physical security&lt;br&gt;- Operations security&lt;br&gt;- Communications security&lt;br&gt;&lt;hr&gt;Control mapping &amp;amp;&lt;br&gt;maturity scoring" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=10;fontColor=#000000;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="320" y="240" width="220" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="ch3" value="&lt;b&gt;GDPR Compliance Checker&lt;/b&gt;&lt;br&gt;&lt;i&gt;(within nist_checklist.py)&lt;/i&gt;&lt;br&gt;&lt;hr&gt;&lt;b&gt;Key Articles:&lt;/b&gt;&lt;br&gt;- Art. 5: Data principles&lt;br&gt;- Art. 6: Lawful processing&lt;br&gt;- Art. 25: Privacy by design&lt;br&gt;- Art. 32: Security measures&lt;br&gt;- Art. 35: Impact assessment&lt;br&gt;&lt;hr&gt;Compliance gap analysis" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=10;fontColor=#000000;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="570" y="240" width="220" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="ch4" value="&lt;b&gt;Encryption Checker&lt;/b&gt;&lt;br&gt;&lt;i&gt;encryption_checker.py&lt;/i&gt;&lt;br&gt;&lt;hr&gt;- File encryption status&lt;br&gt;- Transport encryption&lt;br&gt;  (TLS/SSL)&lt;br&gt;- Data-at-rest checks&lt;br&gt;- Key management&lt;br&gt;  assessment" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=10;fontColor=#000000;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="820" y="240" width="220" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="ch5" value="&lt;b&gt;Permission Checker&lt;/b&gt;&lt;br&gt;&lt;i&gt;permission_checker.py&lt;/i&gt;&lt;br&gt;&lt;hr&gt;- File permission audit&lt;br&gt;- Access control lists&lt;br&gt;- Directory permissions&lt;br&gt;- World-readable detection" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=10;fontColor=#000000;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="1070" y="240" width="220" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="matrix" value="&lt;b&gt;compliance_matrix.py — Compliance Matrix Aggregation&lt;/b&gt;&lt;br&gt;Cross-framework mapping  |  Weighted scoring  |  Gap prioritisation  |  Maturity levels (1-5)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=11;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="200" y="480" width="900" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" style="rounded=0;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1;" parent="1" source="ch1" target="matrix" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" style="rounded=0;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1;" parent="1" source="ch2" target="matrix" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" style="rounded=0;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1;" parent="1" source="ch3" target="matrix" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" style="rounded=0;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1;" parent="1" source="ch4" target="matrix" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" style="rounded=0;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1;" parent="1" source="ch5" target="matrix" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="out_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="120" y="620" width="1060" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="out_label" value="Output" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="130" y="625" width="60" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="out1" value="&lt;b&gt;Compliance Scores&lt;/b&gt;&lt;br&gt;{nist_score, iso_score,&lt;br&gt;gdpr_score, encryption,&lt;br&gt;permissions, overall}" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="150" y="655" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="out2" value="&lt;b&gt;Gap Analysis&lt;/b&gt;&lt;br&gt;Failed controls list&lt;br&gt;by framework" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="400" y="655" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="out3" value="&lt;b&gt;Remediation&lt;/b&gt;&lt;br&gt;&lt;b&gt;Recommendations&lt;/b&gt;&lt;br&gt;Prioritised action items&lt;br&gt;per control gap" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="630" y="655" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="out4" value="&lt;b&gt;Visualisations&lt;/b&gt;&lt;br&gt;(visualisations.py)&lt;br&gt;Compliance radar,&lt;br&gt;control heatmaps" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="860" y="655" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="a6" style="rounded=0;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;" parent="1" source="matrix" target="out_bg" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KRSHz7uXahk6ELmHq8jn-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.424;entryY=0.007;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="input_bg" target="orch_bg">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

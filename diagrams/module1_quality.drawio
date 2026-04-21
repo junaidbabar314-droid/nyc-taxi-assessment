@@ -1,0 +1,128 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5">
+  <diagram id="module1-quality" name="Module 1 — Data Quality Profiling">
+    <mxGraphModel dx="1468" dy="1011" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Module 1: Data Quality Profiling Architecture" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="440" y="15" width="500" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="50_ujrryuN1Pl0T1F8-g-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="input" target="orchestrator_bg">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="input" value="&lt;b&gt;Input: Pandas DataFrame&lt;/b&gt;&lt;br&gt;19 taxi fields per record&lt;br&gt;(VendorID, pickup/dropoff times, locations,&lt;br&gt;fare amounts, payment type, etc.)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=11;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="530" y="60" width="340" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="orchestrator_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8E8E8;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="40" y="180" width="1320" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="orch_label" value="quality_profiler.py — Orchestrator" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="60" y="185" width="270" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="50_ujrryuN1Pl0T1F8-g-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dim1_bg" target="scoring">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dim1_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="70" y="230" width="280" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="dim1_title" value="&lt;b&gt;completeness.py&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;fontStyle=0;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="130" y="235" width="140" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="dim1_weight" value="Weight: 25%" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;fontStyle=2;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="150" y="258" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="dim1_checks" value="&lt;b&gt;Checks:&lt;/b&gt;&lt;br&gt;- Null / missing value rates per field&lt;br&gt;- Required field presence validation&lt;br&gt;- Row-level completeness scoring&lt;br&gt;- Column-level completeness scoring&lt;br&gt;- Overall completeness percentage" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="85" y="280" width="250" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="dim1_out" value="Score: 0-100" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="140" y="395" width="100" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="50_ujrryuN1Pl0T1F8-g-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dim2_bg" target="scoring">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dim2_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="380" y="230" width="280" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="dim2_title" value="&lt;b&gt;accuracy.py&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="455" y="235" width="110" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="dim2_weight" value="Weight: 25%" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;fontStyle=2;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="465" y="258" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="dim2_checks" value="&lt;b&gt;Checks:&lt;/b&gt;&lt;br&gt;- IQR-based outlier detection&lt;br&gt;- GPS coordinate validation&lt;br&gt;- Fare amount range validation&lt;br&gt;- Passenger count validation&lt;br&gt;- Trip distance plausibility" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="395" y="280" width="250" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="dim2_out" value="Score: 0-100" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="455" y="395" width="100" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="50_ujrryuN1Pl0T1F8-g-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dim3_bg" target="scoring">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dim3_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="690" y="230" width="280" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="dim3_title" value="&lt;b&gt;consistency.py&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="766" y="235" width="128" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="dim3_weight" value="Weight: 25%" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;fontStyle=2;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="775" y="258" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="dim3_checks" value="&lt;b&gt;Checks:&lt;/b&gt;&lt;br&gt;- Cross-field logical rules&lt;br&gt;- Pickup before dropoff time&lt;br&gt;- Fare vs distance correlation&lt;br&gt;- Payment type vs amount&lt;br&gt;- Zone ID referential integrity" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="705" y="280" width="250" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="dim3_out" value="Score: 0-100" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="770" y="395" width="100" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="50_ujrryuN1Pl0T1F8-g-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1140" y="426" as="sourcePoint" />
+            <mxPoint x="600" y="496" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1140" y="466" />
+              <mxPoint x="600" y="466" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dim4_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="1000" y="230" width="280" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="dim4_title" value="&lt;b&gt;timeliness.py&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="1080" y="235" width="115" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="dim4_weight" value="Weight: 25%" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;fontStyle=2;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="1090" y="258" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="dim4_checks" value="&lt;b&gt;Checks:&lt;/b&gt;&lt;br&gt;- Data freshness assessment&lt;br&gt;- Publication delay analysis&lt;br&gt;- Temporal coverage gaps&lt;br&gt;- Record timestamp validity&lt;br&gt;- Year-over-year availability" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="1015" y="280" width="250" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="dim4_out" value="Score: 0-100" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="1085" y="395" width="100" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="scoring" value="&lt;b&gt;Weighted Scoring Engine&lt;/b&gt;&lt;br&gt;Overall Quality = (Completeness x 0.25) + (Accuracy x 0.25) + (Consistency x 0.25) + (Timeliness x 0.25)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=11;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="320" y="500" width="560" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="out_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="240" y="640" width="920" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="out_label" value="Output" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="250" y="645" width="60" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="out1" value="&lt;b&gt;Quality Scores Dict&lt;/b&gt;&lt;br&gt;{completeness, accuracy,&lt;br&gt;consistency, timeliness,&lt;br&gt;overall}" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="270" y="675" width="180" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="out2" value="&lt;b&gt;Visualisations&lt;/b&gt;&lt;br&gt;(visualisations.py)&lt;br&gt;Radar chart, bar charts,&lt;br&gt;heatmaps" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="510" y="675" width="170" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="out3" value="&lt;b&gt;HTML Report&lt;/b&gt;&lt;br&gt;(report_generator.py)&lt;br&gt;Detailed quality findings" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;dashed=1;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="740" y="675" width="170" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="out4" value="&lt;b&gt;Dashboard Page&lt;/b&gt;&lt;br&gt;Quality Assessment&lt;br&gt;(Streamlit)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;dashed=1;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="960" y="675" width="170" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="50_ujrryuN1Pl0T1F8-g-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.39;entryY=0.047;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="scoring" target="out_bg">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

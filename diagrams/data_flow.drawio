@@ -1,0 +1,115 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5">
+  <diagram id="data-flow" name="Data Flow Pipeline">
+    <mxGraphModel dx="2120" dy="1460" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="legend_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="600" y="380" width="260" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="title" value="Data Flow Pipeline" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="600" y="15" width="400" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="src_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="70" width="250" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="src_label" value="SOURCE" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="120" y="75" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="nyc_tlc" value="&lt;b&gt;NYC TLC Open Data&lt;/b&gt;&lt;br&gt;(Yellow Taxi Trip Records)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=11;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="80" y="110" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="parquet_2019" value="2019 Parquet files (x12)&lt;br&gt;&lt;b&gt;84.4M records&lt;/b&gt;&lt;br&gt;~1.2 GB" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="65" y="200" width="150" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="parquet_2024" value="2024 Parquet files (x12)&lt;br&gt;&lt;b&gt;20.3M records&lt;/b&gt;&lt;br&gt;~0.6 GB" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="65" y="270" width="150" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="zones" value="taxi_zones.csv&lt;br&gt;265 zones" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;dashed=1;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="80" y="335" width="120" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="GD8xTD_KQ59h0NiW1aRT-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="proc_bg" target="assess_bg">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="proc_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8E8E8;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="340" y="70" width="200" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="proc_label" value="PROCESSING" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="385" y="75" width="110" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="loader" value="&lt;b&gt;data_loader.py&lt;/b&gt;&lt;br&gt;&lt;hr&gt;Read Parquet files&lt;br&gt;Merge with zones&lt;br&gt;Type validation" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=11;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="365" y="110" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="sampling" value="&lt;b&gt;Optional Sampling&lt;/b&gt;&lt;br&gt;&lt;hr&gt;Configurable %&lt;br&gt;Stratified by month" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;dashed=1;fontSize=11;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="365" y="220" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="df_out" value="&lt;b&gt;Pandas DataFrame&lt;/b&gt;&lt;br&gt;19 columns per record" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=11;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="365" y="305" width="150" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" style="rounded=0;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1;" parent="1" source="loader" target="sampling" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" style="rounded=0;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1;" parent="1" source="sampling" target="df_out" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GD8xTD_KQ59h0NiW1aRT-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="assess_bg" target="out_bg">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assess_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="590" y="70" width="450" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="assess_label" value="ASSESSMENT (Parallel)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="720" y="75" width="180" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="GD8xTD_KQ59h0NiW1aRT-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="quality" target="json_out">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="quality" value="&lt;b&gt;Quality Profiler&lt;/b&gt;&lt;br&gt;&lt;hr&gt;Completeness&lt;br&gt;Accuracy&lt;br&gt;Consistency&lt;br&gt;Timeliness&lt;br&gt;&lt;hr&gt;&lt;i&gt;Score: 0-100&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="610" y="110" width="120" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="privacy" value="&lt;b&gt;Privacy Assessor&lt;/b&gt;&lt;br&gt;&lt;hr&gt;PII classification&lt;br&gt;K-anonymity&lt;br&gt;Entropy&lt;br&gt;Uniqueness&lt;br&gt;Linkage attack&lt;br&gt;&lt;hr&gt;&lt;i&gt;Risk: 0-100&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="750" y="110" width="120" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="GD8xTD_KQ59h0NiW1aRT-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="security" target="json_out">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="security" value="&lt;b&gt;Security Assessor&lt;/b&gt;&lt;br&gt;&lt;hr&gt;NIST CSF 2.0&lt;br&gt;ISO 27001&lt;br&gt;GDPR compliance&lt;br&gt;Encryption check&lt;br&gt;Permission check&lt;br&gt;&lt;hr&gt;&lt;i&gt;Score: 0-100&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="890" y="110" width="130" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="json_out" value="&lt;b&gt;JSON Results&lt;/b&gt;&lt;br&gt;{quality, privacy, security}" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=11;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="710" y="300" width="200" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="a9" style="rounded=0;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1;" parent="1" source="privacy" target="json_out" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="out_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8E8E8;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="1090" y="70" width="260" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="out_label" value="OUTPUT" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="1180" y="75" width="70" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="dashboard" value="&lt;b&gt;Streamlit Dashboard&lt;/b&gt;&lt;br&gt;&lt;hr&gt;Interactive visualisations&lt;br&gt;Governance scorecard&lt;br&gt;Module drill-down pages&lt;br&gt;Data explorer" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=11;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="1115" y="110" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="pdf_report" value="&lt;b&gt;PDF Report&lt;/b&gt;&lt;br&gt;Executive summary" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;dashed=1;fontSize=11;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="1100" y="240" width="140" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="csv_report" value="&lt;b&gt;CSV Export&lt;/b&gt;&lt;br&gt;Raw assessment data" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;dashed=1;fontSize=11;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="1200" y="290" width="140" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="a12" style="rounded=0;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1;dashed=1;" parent="1" source="dashboard" target="pdf_report" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a13" style="rounded=0;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1;dashed=1;" parent="1" source="dashboard" target="csv_report" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vol_note" value="Total: ~104.7M records across 2 years&lt;br&gt;19 fields per record (Parquet columnar format)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;fontStyle=2;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="590" y="390" width="280" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="GD8xTD_KQ59h0NiW1aRT-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.003;entryY=0.55;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="src_bg" target="proc_bg">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

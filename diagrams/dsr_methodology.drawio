@@ -1,0 +1,158 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5">
+  <diagram id="dsr-methodology" name="DSR Methodology Mapping">
+    <mxGraphModel dx="1363" dy="939" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Design Science Research Methodology (Hevner et al., 2004) — Project Mapping" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="250" y="15" width="750" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="s1_box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="40" y="80" width="210" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="s1_num" value="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="125" y="70" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="s1_title" value="&lt;b&gt;Problem&lt;br&gt;Identification&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="70" y="100" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s1_detail" value="&lt;hr&gt;&lt;b&gt;Project Activities:&lt;/b&gt;&lt;br&gt;- Literature review&lt;br&gt;- Gap analysis in big data&lt;br&gt;  transportation security&lt;br&gt;- Stakeholder needs&lt;br&gt;  identification&lt;br&gt;- Research questions&lt;br&gt;  formulation" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="50" y="140" width="170" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="280" y="80" width="210" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_num" value="2" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="370" y="70" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_title" value="&lt;b&gt;Design&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="350" y="105" width="60" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_detail" value="&lt;hr&gt;&lt;b&gt;Project Activities:&lt;/b&gt;&lt;br&gt;- Framework architecture&lt;br&gt;  (4-layer design)&lt;br&gt;- Module specifications&lt;br&gt;- Data flow design&lt;br&gt;- Quality/privacy/security&lt;br&gt;  metrics definition&lt;br&gt;- Dashboard wireframes" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="290" y="130" width="180" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="520" y="80" width="210" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_num" value="3" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="610" y="70" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_title" value="&lt;b&gt;Development&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="572" y="105" width="100" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_detail" value="&lt;hr&gt;&lt;b&gt;Project Activities:&lt;/b&gt;&lt;br&gt;- Python implementation&lt;br&gt;- Module 1: Quality profiling&lt;br&gt;- Module 2: Privacy detection&lt;br&gt;- Module 3: Security checks&lt;br&gt;- Module 4: Streamlit&lt;br&gt;  dashboard&lt;br&gt;- Unit testing (pytest)" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="530" y="130" width="185" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="760" y="80" width="210" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_num" value="4" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="850" y="70" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_title" value="&lt;b&gt;Demonstration&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="807" y="105" width="115" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_detail" value="&lt;hr&gt;&lt;b&gt;Project Activities:&lt;/b&gt;&lt;br&gt;- NYC Taxi data assessment&lt;br&gt;  (2019 vs 2024 comparison)&lt;br&gt;- 84M + 20M record analysis&lt;br&gt;- Quality score generation&lt;br&gt;- Privacy risk assessment&lt;br&gt;- Security compliance audit&lt;br&gt;- Dashboard demonstration" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="770" y="130" width="190" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="s5_box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="1000" y="80" width="210" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="s5_num" value="5" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="1090" y="70" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="s5_title" value="&lt;b&gt;Evaluation&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="1060" y="105" width="90" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="s5_detail" value="&lt;hr&gt;&lt;b&gt;Project Activities:&lt;/b&gt;&lt;br&gt;- Accuracy metrics&lt;br&gt;  validation&lt;br&gt;- Usability testing&lt;br&gt;  (dashboard feedback)&lt;br&gt;- Scalability benchmarks&lt;br&gt;- Cross-module consistency&lt;br&gt;- Framework effectiveness&lt;br&gt;  assessment" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="1010" y="130" width="175" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="s6_box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="1240" y="80" width="210" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="s6_num" value="6" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="1330" y="70" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="s6_title" value="&lt;b&gt;Communication&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="1290" y="105" width="120" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="s6_detail" value="&lt;hr&gt;&lt;b&gt;Project Activities:&lt;/b&gt;&lt;br&gt;- MSc dissertation document&lt;br&gt;- Governance dashboard&lt;br&gt;  (interactive artefact)&lt;br&gt;- PDF/CSV reports&lt;br&gt;- Viva presentation&lt;br&gt;- Code repository&lt;br&gt;  documentation" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="1250" y="130" width="180" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="fw1" style="rounded=0;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="s1_box" target="s2_box" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fw2" style="rounded=0;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="s2_box" target="s3_box" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fw3" style="rounded=0;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="s3_box" target="s4_box" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fw4" style="rounded=0;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="s4_box" target="s5_box" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fw5" style="rounded=0;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="s5_box" target="s6_box" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fb1_label" value="Evaluation → Design&lt;br&gt;(iterative refinement)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;fontStyle=2;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="490" y="320" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="fb1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1.5;dashed=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="s5_box" target="s2_box" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1105" y="360" />
+              <mxPoint x="385" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fb2_label" value="Evaluation → Development&lt;br&gt;(bug fixes, improvements)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;fontStyle=2;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="730" y="380" width="170" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="fb2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;strokeColor=#000000;strokeWidth=1;dashed=1;dashPattern=8 4;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="s5_box" target="s3_box" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1105" y="420" />
+              <mxPoint x="625" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="principles_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="470" width="1410" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="principles_title" value="DSR Principles Applied (Hevner et al., 2004)" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=13;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="50" y="475" width="340" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="pr1" value="&lt;b&gt;Design as Artefact&lt;/b&gt;&lt;br&gt;The framework + dashboard&lt;br&gt;are the primary artefacts" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="60" y="505" width="180" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="pr2" value="&lt;b&gt;Problem Relevance&lt;/b&gt;&lt;br&gt;Transportation data governance&lt;br&gt;is an emerging challenge" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="270" y="505" width="200" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="pr3" value="&lt;b&gt;Design Evaluation&lt;/b&gt;&lt;br&gt;Accuracy, usability, and&lt;br&gt;scalability benchmarks" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="500" y="505" width="180" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="pr4" value="&lt;b&gt;Research Contributions&lt;/b&gt;&lt;br&gt;Novel integrated framework&lt;br&gt;for transport data governance" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="710" y="505" width="200" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="pr5" value="&lt;b&gt;Research Rigor&lt;/b&gt;&lt;br&gt;Established metrics,&lt;br&gt;systematic evaluation" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="940" y="505" width="180" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="pr6" value="&lt;b&gt;Communication&lt;/b&gt;&lt;br&gt;Dissertation, dashboard,&lt;br&gt;and exported reports" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="1150" y="505" width="180" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="620" width="350" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_title" value="&lt;b&gt;Legend&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="50" y="622" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg1" value="Solid arrow = Sequential progression" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="50" y="645" width="220" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg2" value="Dashed arrow = Iterative feedback loop" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="50" y="665" width="240" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
